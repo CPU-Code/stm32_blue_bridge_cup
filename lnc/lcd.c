@@ -147,10 +147,12 @@ void STM3210B_LCD_Init(void)
 	LCD_CtrlLinesConfig();
 	dummy = LCD_ReadReg(0);	
 	
-	if(dummy == 0x8230){
+	if(dummy == 0x8230)
+	{
 		REG_8230_Init();
 	}
-	else{
+	else
+	{
 		REG_932X_Init();	
 	}
 	dummy = LCD_ReadReg(0);	
